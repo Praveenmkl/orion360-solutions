@@ -243,6 +243,25 @@
   }
 }
 
+@media (max-width: 640px) {
+  .about-page__hero {
+    padding: calc(var(--navbar-height-mobile) + 2.25rem) 1.25rem 3.5rem;
+  }
+
+  .about-page__header {
+    margin-bottom: 2.25rem;
+  }
+
+  .about-page__story {
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-page__pillars {
+    padding-top: 2.5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .about-page__header > *,
   .about-page__media,

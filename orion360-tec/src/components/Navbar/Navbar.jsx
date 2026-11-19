@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../common/Button/Button";
 import NavLogo from "./NavLogo/NavLogo";
 import NavMenu from "./NavMenu/NavMenu";
@@ -9,6 +9,7 @@ import "./Navbar.css";
 function Navbar({ activeHref = "#home" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     let rafId = 0;
@@ -48,8 +49,35 @@ function Navbar({ activeHref = "#home" }) {
     };
   }, [activeHref]);
 
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const handlePointerDown = (event) => {
+      if (!headerRef.current?.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth > 960) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [menuOpen]);
+
   return (
-    <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`.trim()}>
+    <header
+      ref={headerRef}
+      className={`navbar ${scrolled ? "navbar--scrolled" : ""}`.trim()}
+    >
       <nav className="navbar__inner" aria-label="Main navigation">
         <NavLogo />
         <NavMenu

@@ -138,21 +138,25 @@
 
 @media (max-width: 640px) {
   .service-card__inner {
-    min-height: 245px;
+    min-height: auto;
     padding: 1.65rem 1.4rem;
   }
 
   .service-card__top {
-    margin-bottom: 1.45rem;
+    margin-bottom: 1.15rem;
   }
 
   .service-card__icon-badge {
     width: 48px;
     height: 48px;
-    padding: 10px;
+    padding: 5px;
   }
 
   .service-card__description {
-    margin-bottom: 1.35rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .service-card__link {
+    min-height: 40px;
   }
 }

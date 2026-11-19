@@ -60,6 +60,8 @@
 /* Crop the transparent padding of the logo PNG (see NavLogo.css) */
 .hero__logo {
   height: 100px;
+  width: auto;
+  max-width: 100%;
   aspect-ratio: 2560 / 477;
   object-fit: cover;
   margin-bottom: 1.75rem;
@@ -72,6 +74,7 @@
   letter-spacing: var(--type-h1-tracking);
   color: var(--type-h1-color);
   margin-bottom: 1.5rem;
+  text-wrap: balance;
 }
 
 .hero__description {
@@ -95,17 +98,30 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .hero {
     padding-top: var(--navbar-height-mobile);
   }
+}
 
+@media (max-width: 768px) {
   .hero__logo {
-    height: 46px;
+    height: clamp(44px, 12vw, 68px);
+    margin-bottom: 1.35rem;
   }
 
   .hero__description {
     margin-bottom: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__content {
+    padding: 1.5rem 1.25rem 3.5rem;
+  }
+
+  .hero__title br {
+    display: none;
   }
 }
 

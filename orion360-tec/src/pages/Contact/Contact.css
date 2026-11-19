@@ -123,7 +123,12 @@
 
 .contact-email__link {
   font-weight: 500;
+  overflow-wrap: anywhere;
   transition: color 0.2s ease;
+}
+
+.contact-email--hero {
+  justify-content: center;
 }
 
 .contact-email--hero .contact-email__link {
@@ -669,14 +674,46 @@
   }
 }
 
+@media (max-width: 768px) {
+  /* Prevent iOS Safari auto-zoom on focused form fields */
+  .contact-form__input {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 640px) {
   .contact-hero__actions {
+    width: 100%;
     flex-direction: column;
     gap: 1.15rem;
   }
 
+  .contact-hero__cta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-email__copy {
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+  }
+
+  .contact-intake {
+    padding: 3.25rem 1.25rem 4rem;
+  }
+
+  .contact-intake__grid {
+    gap: 2.25rem;
+  }
+
   .contact-form__row {
     grid-template-columns: 1fr;
+  }
+
+  .contact-topic-pill {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .contact-form__footer {
@@ -696,6 +733,27 @@
   .contact-confirmation__secondary {
     width: 100%;
     text-align: center;
+  }
+
+  .contact-confirmation__reset {
+    min-height: 44px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-card {
+    border-radius: 18px;
+  }
+
+  .contact-form-card__spotlight,
+  .contact-form-card__inner {
+    border-radius: 17px;
+  }
+
+  .contact-form-card__inner {
+    padding: 1.35rem 1.15rem;
   }
 }
 

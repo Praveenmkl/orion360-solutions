@@ -13,7 +13,7 @@ export const contactProcessData = {
     {
       number: "1",
       lead: "We read your message.",
-      body: "Someone from our team looks over your note carefully — no auto-replies.",
+      body: "Someone from our team looks over your note carefully - no auto-replies.",
     },
     {
       number: "2",

@@ -1,7 +1,7 @@
-import webDevIcon from "../assets/web dev.png";
-import mobileDevIcon from "../assets/mobile dev.png";
-import uiuxIcon from "../assets/uiux.png";
-import cloudDevIcon from "../assets/cloud and dev.png";
+import webDevIcon from "../assets/web dev.webp";
+import mobileDevIcon from "../assets/mobile dev.webp";
+import uiuxIcon from "../assets/uiux.webp";
+import cloudDevIcon from "../assets/cloud and dev.webp";
 
 const servicesData = [
   {

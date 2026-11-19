@@ -4,7 +4,7 @@ import ContactCta from "../../components/ContactCta/ContactCta";
 import useInView from "../../hooks/useInView";
 import useSpotlight from "../../hooks/useSpotlight";
 import { aboutPageData } from "../../data/aboutData";
-import companyImage from "../../assets/orion360_company.jpg";
+import companyImage from "../../assets/orion360_company.webp";
 import "./About.css";
 
 function About() {

@@ -44,3 +44,13 @@
 .btn--link:hover {
   color: var(--color-accent-hover);
 }
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.84rem;
+  }
+
+  .btn--primary {
+    padding: 0.95rem 1.75rem;
+  }
+}

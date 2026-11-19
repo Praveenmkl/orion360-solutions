@@ -210,12 +210,18 @@
 
   .process__track {
     top: 10px;
-    bottom: 0;
+    bottom: 1.5rem;
     left: 10px;
     right: auto;
     width: 1px;
     height: auto;
     transform: translateX(-50%);
+    background: linear-gradient(
+      180deg,
+      var(--color-line) 0%,
+      var(--color-line) 82%,
+      transparent 100%
+    );
   }
 
   .process__steps {
@@ -244,6 +250,24 @@
 
   .process__step-title {
     margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .process {
+    padding: 3.75rem 1.25rem 4.25rem;
+  }
+
+  .process__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .process__steps {
+    gap: 1.85rem;
+  }
+
+  .process__step {
+    column-gap: 1rem;
   }
 }
 

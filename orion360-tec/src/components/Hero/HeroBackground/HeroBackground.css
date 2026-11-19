@@ -14,3 +14,12 @@
   height: auto;
   opacity: 0.40;
 }
+
+@media (max-width: 640px) {
+  .hero-bg__img {
+    width: 165%;
+    min-width: 580px;
+    max-width: none;
+    opacity: 0.34;
+  }
+}

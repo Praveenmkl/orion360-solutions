@@ -115,3 +115,21 @@
     gap: 2.5rem;
   }
 }
+
+@media (max-width: 640px) {
+  .about {
+    padding: 3.75rem 1.25rem 4.25rem;
+  }
+
+  .about__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .about__title br {
+    display: none;
+  }
+
+  .about__grid {
+    gap: 2rem;
+  }
+}

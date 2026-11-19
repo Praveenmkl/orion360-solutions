@@ -137,7 +137,9 @@
 .contact-cta__badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
+  max-width: 100%;
   padding: 0.45rem 1rem;
   border-radius: 9999px;
   background-color: rgba(242, 208, 0, 0.08);
@@ -146,12 +148,14 @@
   font-size: 0.76rem;
   font-weight: var(--type-eyebrow-weight);
   letter-spacing: 0.08em;
+  line-height: 1.35;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
 
 .contact-cta__badge-dot {
   position: relative;
+  flex-shrink: 0;
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -326,7 +330,28 @@
   .contact-cta__button,
   .contact-cta__email-btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 320px;
+  }
+
+  .contact-cta__secondary-link {
+    min-height: 44px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cta {
+    padding: 3.75rem 1.25rem 4.25rem;
+  }
+
+  .contact-cta__card-inner {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .contact-cta__badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    padding: 0.4rem 0.85rem;
   }
 }
 

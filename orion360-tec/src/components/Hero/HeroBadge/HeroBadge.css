@@ -1,7 +1,10 @@
 .hero-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 0.65rem;
+  max-width: 100%;
   margin-bottom: 1.5rem;
 }
 
@@ -40,6 +43,21 @@
   80%,
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-badge {
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-badge__icon {
+    width: 24px;
+  }
+
+  .hero-badge__text {
+    font-size: 0.82rem;
   }
 }
 

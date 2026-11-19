@@ -249,8 +249,14 @@
 }
 
 @media (max-width: 600px) {
+  .service-modal-backdrop {
+    padding: 1rem;
+  }
+
   .service-modal {
     padding: 1.65rem 1.35rem;
+    max-height: calc(100svh - 2rem);
+    border-radius: 18px;
   }
 
   .service-modal__footer {

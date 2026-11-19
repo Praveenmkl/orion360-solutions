@@ -1,4 +1,4 @@
-import logo from "../../assets/orion360_logo.png";
+import logo from "../../assets/orion360_logo.webp";
 import {
   contactDetails,
   exploreLinks,

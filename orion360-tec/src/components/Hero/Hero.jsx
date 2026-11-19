@@ -1,7 +1,7 @@
 import HeroBackground from "./HeroBackground/HeroBackground";
 import HeroBadge from "./HeroBadge/HeroBadge";
 import HeroActions from "./HeroActions/HeroActions";
-import logo from "../../assets/orion360_logo.png";
+import logo from "../../assets/orion360_logo.webp";
 import "./Hero.css";
 
 function Hero() {

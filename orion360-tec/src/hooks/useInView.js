@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 function useInView(options = {}) {
-  const { threshold = 0.14, rootMargin = "0px 0px -48px 0px" } = options;
+  const { threshold = 0.05, rootMargin = "0px 0px -20px 0px" } = options;
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(() => {
     if (typeof window === "undefined") return true;

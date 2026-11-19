@@ -1,4 +1,4 @@
-import skyline from "../../../assets/colombo_city2.png";
+import skyline from "../../../assets/colombo_city2.webp";
 import "./HeroBackground.css";
 
 function HeroBackground() {

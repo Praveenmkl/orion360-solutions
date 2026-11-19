@@ -1,4 +1,4 @@
-import lion from "../../../assets/lion.png";
+import lion from "../../../assets/lion.webp";
 import "./HeroBadge.css";
 
 function HeroBadge({ text }) {
