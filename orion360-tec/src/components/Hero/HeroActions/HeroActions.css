@@ -1,0 +1,33 @@
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.hero-actions__link {
+  text-decoration: none;
+}
+
+.hero-actions__label {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1.5px;
+}
+
+.hero-actions__arrow {
+  display: inline-block;
+  transition: transform 0.22s var(--ease-out);
+}
+
+.hero-actions__link:hover .hero-actions__arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}

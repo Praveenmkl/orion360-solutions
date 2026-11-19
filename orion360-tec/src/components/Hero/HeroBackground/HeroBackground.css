@@ -1,0 +1,16 @@
+.hero-bg {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-bg__img {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  opacity: 0.40;
+}

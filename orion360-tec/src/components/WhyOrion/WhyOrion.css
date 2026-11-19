@@ -1,0 +1,105 @@
+.why-orion {
+  background-color: var(--color-black);
+  padding: 5.5rem 1.5rem 7.5rem;
+  position: relative;
+}
+
+.why-orion__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.why-orion__header {
+  text-align: center;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-orion__eyebrow {
+  color: var(--type-eyebrow-color);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-tracking);
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.why-orion__title {
+  font-size: var(--type-h2-size);
+  font-weight: var(--type-h2-weight);
+  color: var(--type-h2-color);
+  letter-spacing: var(--type-h2-tracking);
+  line-height: var(--type-h2-line);
+  margin-bottom: 1.35rem;
+}
+
+.why-orion__subtitle {
+  color: var(--type-subtitle-color);
+  font-size: var(--type-subtitle-size);
+  font-weight: var(--type-subtitle-weight);
+  line-height: var(--type-subtitle-line);
+  max-width: 720px;
+}
+
+.why-orion__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 4vw, 4.25rem);
+}
+
+.why-orion__item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.25s ease;
+}
+
+.why-orion__item:hover {
+  border-top-color: rgba(242, 208, 0, 0.55);
+}
+
+.why-orion__number {
+  color: var(--color-accent);
+  font-size: var(--type-h3-size);
+  font-weight: var(--type-h3-weight);
+  line-height: var(--type-h3-line);
+  margin-bottom: 0.25rem;
+}
+
+.why-orion__item-title {
+  color: var(--type-h3-color);
+  font-size: var(--type-h3-size);
+  font-weight: var(--type-h3-weight);
+  line-height: var(--type-h3-line);
+  letter-spacing: var(--type-h3-tracking);
+  margin-bottom: 1.6rem;
+}
+
+.why-orion__item-description {
+  color: var(--type-body-color);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line);
+}
+
+@media (max-width: 900px) {
+  .why-orion {
+    padding: 4.5rem 1.25rem 5rem;
+  }
+
+  .why-orion__header {
+    margin-bottom: 3rem;
+  }
+
+  .why-orion__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .why-orion__item-title {
+    margin-bottom: 1rem;
+  }
+}

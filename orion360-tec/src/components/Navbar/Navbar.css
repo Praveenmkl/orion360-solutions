@@ -1,0 +1,109 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-black);
+  backdrop-filter: blur(0px) saturate(100%);
+  -webkit-backdrop-filter: blur(0px) saturate(100%);
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-bottom-color: var(--color-line);
+  border-radius: 0px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  will-change: width, top, border-radius;
+  transition:
+    top 0.52s var(--ease-out),
+    width 0.52s var(--ease-out),
+    border-radius 0.52s var(--ease-out),
+    background-color 0.48s ease,
+    border-color 0.48s ease,
+    box-shadow 0.52s var(--ease-out),
+    backdrop-filter 0.48s ease,
+    -webkit-backdrop-filter 0.48s ease;
+}
+
+.navbar--scrolled {
+  top: 1rem;
+  width: 1180px;
+  border-radius: 40px;
+  background-color: rgba(16, 16, 16, 0.56);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 14px 38px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.navbar__inner {
+  max-width: 1320px;
+  height: var(--navbar-height);
+  margin: 0 auto;
+  padding: 0 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  transition:
+    height 0.52s var(--ease-out),
+    padding 0.52s var(--ease-out);
+}
+
+.navbar--scrolled .navbar__inner {
+  height: 70px;
+  padding: 0 0.9rem 0 2rem;
+}
+
+.navbar__cta {
+  font-size: 0.9rem;
+  padding: 0.95rem 2.3rem;
+  transition:
+    padding 0.48s var(--ease-out),
+    font-size 0.48s var(--ease-out),
+    background-color 0.22s ease,
+    transform 0.18s var(--ease-out),
+    box-shadow 0.22s ease;
+}
+
+.navbar--scrolled .navbar__cta {
+  font-size: 0.84rem;
+  padding: 0.72rem 1.75rem;
+}
+
+@media (max-width: 1239px) {
+  .navbar--scrolled {
+    width: calc(100% - 2.5rem);
+  }
+}
+
+@media (max-width: 960px) {
+  .navbar--scrolled {
+    top: 0.75rem;
+    width: calc(100% - 1.5rem);
+    border-radius: 36px;
+  }
+
+  .navbar__inner {
+    height: var(--navbar-height-mobile);
+    padding: 0 1.5rem;
+  }
+
+  .navbar--scrolled .navbar__inner {
+    height: 64px;
+    padding: 0 1.25rem;
+  }
+
+  .navbar__cta {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar__inner,
+  .navbar__cta {
+    transition: none;
+  }
+}

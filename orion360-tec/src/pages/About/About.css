@@ -1,0 +1,256 @@
+.about-page {
+  background-color: var(--color-black);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page__hero {
+  position: relative;
+  padding: calc(var(--navbar-height) + 4.5rem) 1.5rem 6rem;
+}
+
+.about-page__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 520px;
+  background: radial-gradient(
+    ellipse 58% 46% at 50% 24%,
+    rgba(242, 208, 0, 0.055) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.about-page__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.about-page__header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-page__header > * {
+  animation: about-page-enter 0.72s var(--ease-out) both;
+}
+
+.about-page__header > :nth-child(1) {
+  animation-delay: 0.04s;
+}
+
+.about-page__header > :nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.about-page__header > :nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.about-page__eyebrow {
+  color: var(--type-eyebrow-color);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-tracking);
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.about-page__title {
+  font-size: var(--type-h1-size);
+  font-weight: var(--type-h1-weight);
+  color: var(--type-h1-color);
+  letter-spacing: var(--type-h1-tracking);
+  line-height: var(--type-h1-line);
+  max-width: 780px;
+  margin-bottom: 1.15rem;
+  text-wrap: balance;
+}
+
+.about-page__subtitle {
+  color: var(--type-subtitle-color);
+  font-size: var(--type-subtitle-size);
+  font-weight: var(--type-subtitle-weight);
+  line-height: var(--type-subtitle-line);
+  max-width: 580px;
+  text-wrap: pretty;
+}
+
+.about-page__story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2.25rem, 5vw, 4.75rem);
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+/* 1px cursor-reactive frame matching ServiceCard and ContactCta */
+.about-page__media {
+  --spot-x: 50%;
+  --spot-y: 50%;
+  --spot-alpha: 0;
+
+  position: relative;
+  border-radius: 16px;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  animation: about-page-enter 0.75s var(--ease-out) 0.24s both;
+}
+
+.about-page__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    360px circle at var(--spot-x) var(--spot-y),
+    rgba(242, 208, 0, calc(0.65 * var(--spot-alpha))),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.about-page__media-inner {
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 5 / 4;
+  background-color: #111111;
+}
+
+/* Crop top ceiling grid slightly so the yellow branding wall fills the frame cleanly */
+.about-page__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 84%;
+  display: block;
+  transition: transform 0.65s var(--ease-out);
+}
+
+.about-page__media:hover .about-page__image {
+  transform: scale(1.03);
+}
+
+.about-page__narrative {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: about-page-enter 0.75s var(--ease-out) 0.32s both;
+}
+
+.about-page__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.15rem;
+}
+
+.about-page__bar {
+  width: 36px;
+  height: 2px;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 12px rgba(242, 208, 0, 0.4);
+}
+
+.about-page__kicker-text {
+  color: var(--type-eyebrow-color);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-tracking);
+  text-transform: uppercase;
+}
+
+.about-page__story-title {
+  font-size: var(--type-h2-size);
+  font-weight: var(--type-h2-weight);
+  color: var(--type-h2-color);
+  letter-spacing: var(--type-h2-tracking);
+  line-height: var(--type-h2-line);
+  max-width: 24ch;
+  margin-bottom: 1.25rem;
+  text-wrap: balance;
+}
+
+.about-page__paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 52ch;
+}
+
+.about-page__paragraph {
+  color: var(--type-body-color);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line);
+  text-wrap: pretty;
+}
+
+.about-page__pillars {
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes about-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .about-page__hero {
+    padding: calc(var(--navbar-height-mobile) + 3rem) 1.25rem 4.5rem;
+  }
+
+  .about-page__header {
+    margin-bottom: 3rem;
+  }
+
+  .about-page__story {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    margin-bottom: 3.75rem;
+  }
+
+  .about-page__media {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-page__narrative {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .about-page__pillars {
+    padding-top: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page__header > *,
+  .about-page__media,
+  .about-page__narrative {
+    animation: none;
+  }
+
+  .about-page__image {
+    transition: none;
+  }
+}
